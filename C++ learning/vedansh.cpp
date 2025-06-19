@@ -1,6 +1,10 @@
 #include <iostream>
+using namespace std;
 
 int main () {
-    std::cout<<"this is my first code after a long time !";
+    cout<<"Vedansh\nMathur\n";
+    int age = 18;
+    cout<<age<<endl;
+    cout<<sizeof(age);
     return 0;
 }
