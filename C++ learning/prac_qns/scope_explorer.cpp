@@ -8,21 +8,28 @@
 //   - The local counter in main().
 //   - Explain in a comment why the global counter doesn’t change when updateCounter() is called.
 
-# include <iostream>
+#include <iostream>
 using namespace std;
 
-int glo = 100;
+// Global variable
+int counter = 100;
 
-int updateCounter(int glow){
-    cout<< glow + 10<<endl;
+// Function to update a local counter
+void updateCounter() {
+    int counter = 0; // Local variable, shadows global counter
+    counter += 10;   // Increment local counter by 10
+    cout << "Local counter in updateCounter: " << counter << endl;
 }
 
-int main (){
-    int glow = 50;
-    updateCounter(glow);
-    updateCounter(glow);
-    cout << glo<<endl;
-    // cout << glow<<endl;
+int main() {
+    int counter = 50; // Local variable in main, shadows global counter
+    updateCounter();  // Calls function, local counter = 10
+    updateCounter();  // Calls function again, local counter = 10
+    cout << "Global counter: " << counter << endl; // Prints global counter (100)
+    cout << "Local counter in main: " << counter << endl; // Prints local counter (50)
+    // Explanation: The global counter remains 100 because the local counter in updateCounter()
+    // and main() shadows it. Each function call creates a new local counter initialized to 0,
+    // incremented to 10, and destroyed after the function ends, leaving the global counter unchanged.
 
     return 0;
 }
