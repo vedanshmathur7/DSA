@@ -5,8 +5,8 @@ using namespace std;
 
 int main (){
 
-    int n = 0;
-    while (n>= 50){
+    int n = 1;
+    while (n<= 50){
         cout<<n<<endl;
         n++;
     }
