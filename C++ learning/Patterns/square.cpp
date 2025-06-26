@@ -14,7 +14,7 @@ int main () {
     // }
 
 
-    int n = 4;
+    int n = 3;
     char op = 'A'; 
     
     for (int i = 1; i <= n; i++){
