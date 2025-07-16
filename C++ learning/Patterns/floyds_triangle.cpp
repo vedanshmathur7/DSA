@@ -13,15 +13,28 @@ int main () {
     // }
 
 
-    int n = 5;
+    // int n = 5;
+    // char op = 'A';
+
+    // for (int i = 1; i <= n; i++){
+    //     for (int j = 1 ; j<=i; j++){
+    //         cout<<op<<' ';
+    //         op++;
+    //     }
+    //     cout <<endl;
+    // }
+
+
+
+    int n = 4;
     char op = 'A';
 
-    for (int i = 1; i <= n; i++){
-        for (int j = 1 ; j<=i; j++){
-            cout<<op<<' ';
-            op++;
+    for (int i = 1; i <=n; i++){
+        
+        for (int j = i; j>=1 ; j--){
+            cout<<char(op + (j-1))<<' ';
         }
-        cout <<endl;
+        cout<<endl;
     }
     return 0;
 }
