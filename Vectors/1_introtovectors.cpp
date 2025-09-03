@@ -12,13 +12,13 @@ int main () {
     // vector <int> vec (5,0); //3rd way
     // (size, value)
 
-    vector <char> chars = {'a', 'b', 'c', 'd'};
+    // vector <char> chars = {'a', 'b', 'c', 'd'};
 
-    for (char val : chars){
-        cout<<val<<" ";
+
+    vector <char> vednsh = {'a', 'b', ':', 'c'};
+
+    for (char i : vednsh){ // for each loop (int idx_val : vector_name):
+        cout<<i<<" ";
     }
-
-
-    // cout<<vec[1];
     return 0;
 }
